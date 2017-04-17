@@ -4,8 +4,8 @@
 <div class="container">
 
     <div class="row">
-        <example></example>
+        <address-book></address-book>
     </div>
-    
+
 </div>
 @endsection
