@@ -6,7 +6,7 @@
                     <div class="panel-heading">Address Book</div>
 
                     <div class="panel-body">
-                        Address Book Starts Here!
+                        <address-list></address-list>
                     </div>
                 </div>
             </div>

@@ -14,6 +14,7 @@ require('./bootstrap');
  */
 
 Vue.component('address-book', require('./components/AddressBook.vue'));
+Vue.component('address-list', require('./components/AddressList.vue'));
 
 const app = new Vue({
     el: '#app'
