@@ -25,4 +25,13 @@ class AddressBookController extends Controller
     {
         return view('address-book');
     }
+
+    /**
+     * Show the new person form
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function new() {
+        return view('new-person');
+    }
 }

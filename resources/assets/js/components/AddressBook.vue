@@ -6,11 +6,9 @@
                     <div class="panel-heading">Address Book</div>
 
                     <div class="panel-body">
-                        <top-buttons 
-                            :newFormShown="newFormShown" 
-                            :showForm="showNewForm"
-                            :showAddressBook="showAddressBook"></top-buttons>
-                        <new-person-form v-if="newFormShown"></new-person-form>
+                        <button class="btn btn-primary" @click="showNewPersonForm()">
+                            New
+                        </button>
                         <address-list v-if="!newFormShown"></address-list>
                     </div>
                 </div>
@@ -23,17 +21,12 @@
     export default {
         data() {
             return {
-                newFormShown: false
             }
         },
 
         methods: {
-            showNewForm() {
-                this.newFormShown = true;
-            },
-
-            showAddressBook() {
-                this.newFormShown = false;
+            showNewPersonForm() {
+                window.location.pathname = '/myBook/new';
             }
         },
 

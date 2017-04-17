@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/myBook', 'AddressBookController@index');
+Route::get('/myBook/new', 'AddressBookController@new');
