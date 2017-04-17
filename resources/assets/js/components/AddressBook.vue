@@ -6,7 +6,12 @@
                     <div class="panel-heading">Address Book</div>
 
                     <div class="panel-body">
-                        <address-list></address-list>
+                        <top-buttons 
+                            :newFormShown="newFormShown" 
+                            :showForm="showNewForm"
+                            :showAddressBook="showAddressBook"></top-buttons>
+                        <new-person-form v-if="newFormShown"></new-person-form>
+                        <address-list v-if="!newFormShown"></address-list>
                     </div>
                 </div>
             </div>
@@ -16,6 +21,22 @@
 
 <script>
     export default {
+        data() {
+            return {
+                newFormShown: false
+            }
+        },
+
+        methods: {
+            showNewForm() {
+                this.newFormShown = true;
+            },
+
+            showAddressBook() {
+                this.newFormShown = false;
+            }
+        },
+
         mounted() {
         }
     }

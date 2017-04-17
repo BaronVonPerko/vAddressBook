@@ -11285,6 +11285,8 @@ __webpack_require__(33);
 
 Vue.component('address-book', __webpack_require__(36));
 Vue.component('address-list', __webpack_require__(55));
+Vue.component('new-person-form', __webpack_require__(58));
+Vue.component('top-buttons', __webpack_require__(61));
 
 var app = new Vue({
   el: '#app'
@@ -12159,8 +12161,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            newFormShown: false
+        };
+    },
+
+
+    methods: {
+        showNewForm: function showNewForm() {
+            this.newFormShown = true;
+        },
+        showAddressBook: function showAddressBook() {
+            this.newFormShown = false;
+        }
+    },
+
     mounted: function mounted() {}
 });
 
@@ -31747,7 +31770,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "panel-heading"
   }, [_vm._v("Address Book")]), _vm._v(" "), _c('div', {
     staticClass: "panel-body"
-  }, [_c('address-list')], 1)])])])])
+  }, [_c('top-buttons', {
+    attrs: {
+      "newFormShown": _vm.newFormShown,
+      "showForm": _vm.showNewForm,
+      "showAddressBook": _vm.showAddressBook
+    }
+  }), _vm._v(" "), (_vm.newFormShown) ? _c('new-person-form') : _vm._e(), _vm._v(" "), (!_vm.newFormShown) ? _c('address-list') : _vm._e()], 1)])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -41223,6 +41252,167 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
      require("vue-hot-reload-api").rerender("data-v-44d8eff9", module.exports)
+  }
+}
+
+/***/ }),
+/* 57 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {};
+    },
+    mounted: function mounted() {}
+});
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(9)(
+  /* script */
+  __webpack_require__(57),
+  /* template */
+  __webpack_require__(59),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "C:\\Users\\chris\\projects\\vAddressBook\\app\\resources\\assets\\js\\components\\NewPersonForm.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] NewPersonForm.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-f72e7500", Component.options)
+  } else {
+    hotAPI.reload("data-v-f72e7500", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div')
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-f72e7500", module.exports)
+  }
+}
+
+/***/ }),
+/* 60 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {};
+    },
+
+
+    props: ['showForm', 'newFormShown', 'showAddressBook'],
+
+    methods: {},
+
+    mounted: function mounted() {}
+});
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(9)(
+  /* script */
+  __webpack_require__(60),
+  /* template */
+  __webpack_require__(62),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "C:\\Users\\chris\\projects\\vAddressBook\\app\\resources\\assets\\js\\components\\TopButtons.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] TopButtons.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1c6a8775", Component.options)
+  } else {
+    hotAPI.reload("data-v-1c6a8775", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [(!_vm.newFormShown) ? _c('button', {
+    staticClass: "btn btn-primary",
+    on: {
+      "click": function($event) {
+        _vm.showForm()
+      }
+    }
+  }, [_vm._v("New")]) : _vm._e(), _vm._v(" "), (_vm.newFormShown) ? _c('button', {
+    staticClass: "btn btn-primary"
+  }, [_vm._v("Save")]) : _vm._e(), _vm._v(" "), (_vm.newFormShown) ? _c('button', {
+    staticClass: "btn",
+    on: {
+      "click": function($event) {
+        _vm.showAddressBook()
+      }
+    }
+  }, [_vm._v("Cancel")]) : _vm._e()])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-1c6a8775", module.exports)
   }
 }
 

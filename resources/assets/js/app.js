@@ -15,6 +15,8 @@ require('./bootstrap');
 
 Vue.component('address-book', require('./components/AddressBook.vue'));
 Vue.component('address-list', require('./components/AddressList.vue'));
+Vue.component('new-person-form', require('./components/NewPersonForm.vue'));
+Vue.component('top-buttons', require('./components/TopButtons.vue'));
 
 const app = new Vue({
     el: '#app'
