@@ -11,7 +11,7 @@ class AddressController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($user_id)
+    public function index()
     {
         $addresses = \App\Address::all();
         return $addresses;

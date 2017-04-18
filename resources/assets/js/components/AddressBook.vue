@@ -9,7 +9,7 @@
                         <button class="btn btn-primary" @click="showNewPersonForm()">
                             New
                         </button>
-                        <address-list v-if="!newFormShown"></address-list>
+                        <address-list></address-list>
                     </div>
                 </div>
             </div>
